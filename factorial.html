@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+let num = prompt("Enter a positive number:");
+
+
+num = parseInt(num);
+
+function findFactorial(x) {
+    if (x < 0) {
+        return "Factorial is not defined for negative numbers.";
+    }
+    
+    let result = 1;
+    
+    
+    for (let i = 1; i <= x; i++) {
+        result *= i;
+    }
+    
+    return result;
+}
+
+
+let answer = findFactorial(num);
+alert("The factorial of " + num + " is " + answer);
+    </script>
+</body>
+</html>
