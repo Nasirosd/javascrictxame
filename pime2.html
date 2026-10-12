@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Checker</title>
+</head>
+<body>
+<script> 
+    let mynum = prompt("Enter a number", "");
+    mynum = parseInt(mynum);
+
+    function checkprime(x) {
+        // যদি ব্যবহারকারী কোনো সংখ্যা না দিয়ে ক্যানসেল করেন বা ভুল ইনপুট দেন
+        // if (isNaN(x)) {
+        //     alert("Please enter a valid number!");
+        //     return;
+        // }
+
+        if (x <= 1) {
+            alert(x + " is not a prime number");
+            return;
+        } 
+        
+        let isPrime = true;
+
+        // লুপটি ২ থেকে শুরু হয়ে x এর আগের সংখ্যা পর্যন্ত চেক করবে
+        for (let i = 2; i < x; i++) {
+            if (x % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) {
+            alert(x + " is a prime number");
+        } else {
+            alert(x + " is not a prime number");
+        }
+    }
+
+    checkprime(mynum);
+</script>
+</body>
+</html>

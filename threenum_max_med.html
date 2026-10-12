@@ -1,40 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h3>Find out Prime number</h3>
     <script>
-    
-let a = Number(prompt("Enter first number:"));
-let b = Number(prompt("Enter second number:"));
-let c = Number(prompt("Enter third number:"));
+      let mynum = prompt("Enter a number", "");
 
-let max, min, middle;
+      mynum = parseInt(mynum);
 
-if (a >= b && a >= c) {
-    max = a;
-} else if (b >= a && b >= c) {
-    max = b;
-} else {
-    max = c;
-}
+      function checkPrime(x) {
+        if (x == 1) {
+          alert(x + " is not a prime number");
+          return;
+        } else if (x == 2) {
+          alert(x + " is a prime number");
+          return;
+        } else {
+          for (let i = 2; i < x; i++) {
+            if (x % i == 0) {
+              alert(x + " is not a prime number");
+              return;
+            } // if close
+          } // for close
 
-if (a <= b && a <= c) {
-    min = a;
-} else if (b <= a && b <= c) {
-    min = b;
-} else {
-    min = c;
-}
+          alert(x + " is a prime number");
+          return;
+        }
+      } // function close
 
-
-middle = (a + b + c) - max - min;
-
-
-alert("Maximum: " + max + "\nMinimum: " + min + "\nMiddle: " + middle);
+      checkPrime(mynum); // calling
     </script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form name="myform" action="" onsubmit="return validatev();">
+    <input type="text" name="email">
+<input type="submit" name="submit">
+</form> 
+<script>
+function validatev(){
+    let email = document.myform.email.value;
+    let pattern =/^[a-z]+@[a-z]+\.[a-z]{2,4}$/;
+    if (email.search(pattern) ==-1) {
+        alert("invaled email add");
+        return false;
+
+    }else{
+        alert("valed email");
+    }
+}
+
+</script>
+   
+</body>
+</html>
