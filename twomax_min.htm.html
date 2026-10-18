@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ইউজারের কাছ থেকে ২টি সংখ্যা নেওয়া
+let a = Number(prompt("Enter first number:"));
+let b = Number(prompt("Enter second number:"));
+
+let max, min;
+
+// সর্বোচ্চ (Max) এবং সর্বনিম্ন (Min) বের করার নিয়ম
+if (a > b) {
+    max = a;
+    min = b;
+} else {
+    max = b;
+    min = a;
+}
+
+// ফলাফল দেখানো
+alert("Maximum: " + max + "\nMinimum: " + min);
+    </script>
+</body>
+</html>
